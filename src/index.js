@@ -1,8 +1,42 @@
-import animals, { useAnimals } from "./data";
+import React from "react";
+import ReactDOM from "react-dom";
 
-console.log(animals);
+const {
+  speedStats: { topSpeed: hondaTopSpeed }
+} = honda;
+const {
+  speedStats: { topSpeed: teslaTopSpeed }
+} = tesla;
 
-const [cat, dog] = animals;
+const {
+  coloursByPopularity: [hondaTopColour]
+} = honda;
+const {
+  coloursByPopularity: [teslaTopColour]
+} = tesla;
+
+ReactDOM.render(
+  <table>
+    <tr>
+      <th>Brand</th>
+      <th>Top Speed</th>
+      <th>Top Colour</th>
+    </tr>
+    <tr>
+      <td>{tesla.model}</td>
+      <td>{teslaTopSpeed}</td>
+      <td>{teslaTopColour}</td>
+    </tr>
+    <tr>
+      <td>{honda.model}</td>
+      <td>{hondaTopSpeed}</td>
+      <td>{hondaTopColour}</td>
+    </tr>
+  </table>,
+  document.getElementById("root")
+);
+
+// import animals, { useAnimals } from "./data";
 
 // //Destructuring Arrays
 // // console.log(animals);
@@ -23,38 +57,3 @@ const [cat, dog] = animals;
 // CHALLENGE: uncomment the code below and see the car stats rendered
 
 // const [honda, tesla] = cars;
-
-// const {
-//   speedStats: { topSpeed: hondaTopSpeed }
-// } = honda;
-// const {
-//   speedStats: { topSpeed: teslaTopSpeed }
-// } = tesla;
-
-// const {
-//   coloursByPopularity: [hondaTopColour]
-// } = honda;
-// const {
-//   coloursByPopularity: [teslaTopColour]
-// } = tesla;
-
-// ReactDOM.render(
-//   <table>
-//     <tr>
-//       <th>Brand</th>
-//       <th>Top Speed</th>
-//       <th>Top Colour</th>
-//     </tr>
-//     <tr>
-//       <td>{tesla.model}</td>
-//       <td>{teslaTopSpeed}</td>
-//       <td>{teslaTopColour}</td>
-//     </tr>
-//     <tr>
-//       <td>{honda.model}</td>
-//       <td>{hondaTopSpeed}</td>
-//       <td>{hondaTopColour}</td>
-//     </tr>
-//   </table>,
-//   document.getElementById("root")
-// );
