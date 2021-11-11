@@ -1,5 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import cars from "./practice";
+
+const [honda, tesla] = cars;
 
 const {
   speedStats: { topSpeed: hondaTopSpeed }
@@ -55,5 +58,3 @@ ReactDOM.render(
 // // console.log(food);
 
 // CHALLENGE: uncomment the code below and see the car stats rendered
-
-// const [honda, tesla] = cars;
