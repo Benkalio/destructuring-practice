@@ -37,6 +37,7 @@ const {
   coloursByPopularity: [teslaTopColour]
 } = tesla;
 
+
 ReactDOM.render(
   <table>
     <tr>
