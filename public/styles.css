@@ -1,3 +1,11 @@
 body {
   box-sizing: border-box;
+  background-color: rgb(196, 167, 130);
+}
+
+#root {
+  color: black;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
 }
